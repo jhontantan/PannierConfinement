@@ -3,7 +3,7 @@ package com.i.pannierconfinement;
 import java.io.Serializable;
 
 
-public class Products implements Serializable {
+public class Produits implements Serializable {
 
     String idProd;
     String nomProd;
@@ -11,7 +11,7 @@ public class Products implements Serializable {
     double prix;
 
 
-    public Products(String idProd, String nomProd, String desc, double prix) {
+    public Produits(String idProd, String nomProd, String desc, double prix) {
         this.idProd = idProd;
         this.nomProd = nomProd;
         this.desc = desc;

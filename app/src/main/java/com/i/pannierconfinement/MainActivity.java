@@ -38,6 +38,8 @@ public class MainActivity extends AppCompatActivity {
         listProducts.add(new Produits("1","Manzana","Fruta",100));
         listProducts.add(new Produits("2","Pera","Fruta Verde",50));
         listProducts.add(new Produits("3","Banano","Fruta Amarilla",20));
+
+        adaptader = new AdapterProduits(MainActivity.this,tvCmptProduct,btnPanier,listProducts,pannier);
         rvListProducts.setAdapter(adaptader);
 
 

@@ -50,9 +50,14 @@ public class AdapterProduits extends RecyclerView.Adapter<AdapterProduits.Produi
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (produitsViewHolder.cbPanier.isChecked() == true) {
-                    tvCmptProduct.setText(""+Integer.parseInt(tvCmptProduct.getText().toString().trim())+1);
+                    tvCmptProduct.setText(""+(Integer.parseInt(tvCmptProduct.getText().toString().trim())+1));
                     pannier.add(listProduits.get(position));
                 }
+                else if (produitsViewHolder.cbPanier.isChecked() == false) {
+                    tvCmptProduct.setText(""+(Integer.parseInt(tvCmptProduct.getText().toString().trim())-1));
+                    pannier.remove(listProduits.get(position));
+                }
+
             }
         });
 

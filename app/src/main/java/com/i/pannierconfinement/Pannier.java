@@ -23,7 +23,7 @@ public class Pannier extends AppCompatActivity {
         setContentView(R.layout.activity_pannier);
         getSupportActionBar().hide();
 
-        pannier = (List<Produits>) getIntent().getSerializableExtra("Panier");
+        pannier = (List<Produits>) getIntent().getSerializableExtra("Pannier");
 
         rvListPannier = findViewById(R.id.rvListPannier);
         rvListPannier.setLayoutManager(new GridLayoutManager(Pannier.this,1));

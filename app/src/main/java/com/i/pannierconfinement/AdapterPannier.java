@@ -46,7 +46,7 @@ public class AdapterPannier extends RecyclerView.Adapter<AdapterPannier.Produits
     public void onBindViewHolder(@NonNull ProduitsViewHolder produitsViewHolder, int position) {
         produitsViewHolder.tvNombProduit.setText(pannier.get(position).getNomProd());
         produitsViewHolder.tvDescProduit.setText(pannier.get(position).getDesc());
-        produitsViewHolder.tvPrix.setText(""+pannier.get(position).getPrix());
+        produitsViewHolder.tvTotal.setText(""+pannier.get(position).getPrix());
 
     }
 
@@ -56,14 +56,14 @@ public class AdapterPannier extends RecyclerView.Adapter<AdapterPannier.Produits
     }
 
     public class ProduitsViewHolder extends RecyclerView.ViewHolder {
-        TextView tvNombProduit, tvDescProduit, tvPrix;
+        TextView tvNombProduit, tvDescProduit, tvTotal;
 
         public ProduitsViewHolder(@NonNull View itemView) {
             super(itemView);
 
             tvNombProduit = itemView.findViewById(R.id.tvNombProduit);
             tvDescProduit = itemView.findViewById(R.id.tvDescProduit);
-            tvPrix = itemView.findViewById(R.id.tvPrix);
+            tvTotal = itemView.findViewById(R.id.tvTotal);
 
 
         }
